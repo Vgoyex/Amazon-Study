@@ -2,6 +2,8 @@ function diagonalDifference(arr) {
   //i -> row j -> column
   // Write your code here
   //arr[[]]
+  //a[11],a[22],a[33] -> a[0,0], a[1,1], a[2,2] considering a 3x3 matrix
+  //b[13],b[22],b[31] -> a[0,2], a[1,1], a[2,0] considering a 3x3 matrix
   let d1 = 0;
   let d2 = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -10,13 +12,11 @@ function diagonalDifference(arr) {
       if (i == j) d1 += arr[i][j];
 
       // finding sum of secondary diagonal
-      if (i == (arr.length - j - 1)) d2 += arr[i][j];
+      if (i == arr.length - j - 1) d2 += arr[i][j];
     }
   }
   return Math.abs(d1 - d2);
 }
-//a[11],a[22],a[33]
-//b[13],b[22],b[31]
 
 console.log(diagonalDifference([
   [11, 2, 4],
