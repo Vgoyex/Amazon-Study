@@ -41,12 +41,12 @@ function performOperations(arr, operations) {
 }
 console.log(
   performOperations(
-    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9], //* array 
     [
       [0, 9],
       [3, 6],
       [4, 5],
       [2, 3],
-    ]
+    ] //* operations
   )
 );
